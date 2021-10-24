@@ -1,31 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Darah Barreto - DoWhile 2021</title>
-    <style>
-      html,
-      body {
-        height: 100%;
-      }
-      body {
-        display: grid;
-        place-items: center;
-        background: lightblue;
-      }
-      h1 {
-        font-size: 1.5rem;
-      }
-      a {
-        color: lightseagreen;
-        text-decoration: none;
-      }
-    </style>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Darah Barreto</h1>
-    <a href="https://linkedin.com/in/darahbarreto">vamos nos conectar?</a>
+    <main>
+      <div class="container">
+        <div class="avatar">
+          <span>
+            <img src="images/build.svg" alt="Selo Rocketseat" />
+          </span>
+          <img
+            src="https://lorempixel.com/185/185/people/"
+            alt="Foto pessoal"
+          />
+        </div>
+
+        <h1>Darah Barreto</h1>
+        <a href="https://github.com/darahss">
+          <img src="images/github.svg" alt="github icon" />
+          @darahss</a
+        >
+
+        <p>An instructor focused on helping pople start programming for web</p>
+
+        <ul>
+          <li class="youtube">
+            <a href="https://youtube.com/oodarah" target="_blank">
+              <img src="images/youtube.svg" alt="youtube icon" />
+            </a>
+          </li>
+          <li class="facebook">
+            <a href="https://facebook.com/darahbarreto" target="_blank">
+              <img src="images/facebook.svg" alt="facebook icon" />
+            </a>
+          </li>
+          <li class="instagram">
+            <a href="https://instagram.com/darahss" target="_blank">
+              <img src="images/instagram.svg" alt="instagram icon" />
+            </a>
+          </li>
+          <li class="twitter">
+            <a href="https://twitter.com/darinightt" target="_blank">
+              <img src="images/twitter.svg" alt="twitter icon" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script>
+      const socialMediaLinks = {
+        github: 'darahss',
+        youtube: 'oodarah',
+        instagram: 'darahss',
+        facebook: 'darahbarreto',
+        twitter: 'darinightt'
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${socialMediaLinks[social]}`
+
+          alert(li.children[0].href)
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
