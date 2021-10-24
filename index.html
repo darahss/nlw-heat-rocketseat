@@ -24,16 +24,17 @@
           <img
             src="https://lorempixel.com/185/185/people/"
             alt="Foto pessoal"
+            id= "userImage"
           />
         </div>
 
-        <h1>Darah Barreto</h1>
-        <a href="https://github.com/darahss">
+        <h1 id="userName">Darah Barreto</h1>
+        <a id="userLink" href="https://github.com/darahss">
           <img src="images/github.svg" alt="github icon" />
-          @darahss</a
-        >
+          <span id="userLogin">darahss</span>
+        </a>
 
-        <p>An instructor focused on helping pople start programming for web</p>
+        <p id="userBio">A dentist trying to change career and becoming a dev</p>
 
         <ul>
           <li class="youtube">
@@ -59,27 +60,6 @@
         </ul>
       </div>
     </main>
-
-    <script>
-      const socialMediaLinks = {
-        github: 'darahss',
-        youtube: 'oodarah',
-        instagram: 'darahss',
-        facebook: 'darahbarreto',
-        twitter: 'darinightt'
-      }
-
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://${social}.com/${socialMediaLinks[social]}`
-
-          alert(li.children[0].href)
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
